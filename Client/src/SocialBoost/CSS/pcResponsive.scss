@@ -1,0 +1,24 @@
+@media(max-width: 991px) {
+    .hero{
+      padding: 0px;
+    }
+    .heroHeading .first-heading h1{
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    .scroll-downs{
+        top: 85vh; 
+    }
+}
+@media(min-width: 991px) {
+    .hero{
+      padding: 0px;
+    }
+    .heroHeading .first-heading h1{
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    .scroll-downs{
+        top: 80vh; 
+    }
+}

@@ -1,0 +1,310 @@
+:root{ 
+    --bg: #EEF3F5;
+    --color: #d13282;
+    --color1: #ddd7e6;
+    --color2: #181D50;
+    --color3: #1746A2;
+    --color4: #5F9DF7;
+    --color5: #FF731D;
+    --color6: #FFF7E9;
+    /* Start New Palate */
+    --color7: #e77e49;
+    --color8: #fdf5ec;
+    --color9: #0c2e62;
+    --color10: #e88553;
+    --color11: #e9eef3;
+    /* End New Palate */
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+html{
+    font-size: 16px;
+}
+.bgc{
+    background-color: white;
+}
+
+  .text img{
+    width: 20px;
+  }
+
+.Border{
+    border: 1px solid green;
+}
+
+.stepsDiv{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: large;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.stepsDiv > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    border: 1px solid var(--gray-dark);
+    box-shadow: -10px 10px 3px 0px rgb(222, 222, 222)
+    /* border-bottom: 2px solid var(--color5); */
+}
+
+.stepsDiv > div:nth-child(1){
+    border: none;
+    box-shadow: none;
+}
+
+.stepImg{
+    width: 130px;
+}
+
+.stepsDiv > div > p {
+    color: black;
+}
+
+.stepsDiv > div > h4 {
+    text-shadow: 1px 1px 1px var(--blue);
+    color: var(--blue);
+}
+
+/* Navigation Card Styles */
+.nav-card i {
+    font-size: 30px;
+}
+
+.nav-card h5 {
+    color: #6c757d;
+}
+
+.nav-card div {
+    border-bottom: 2px solid white;
+}
+
+.nav-card-link{
+    margin: 0px 10px;
+}
+
+.nav-card-link:hover {
+    text-decoration: none;
+}
+
+.nav-card-link:hover > div {
+    border-bottom: 2px solid var(--blue);
+}
+.nav-card-link:hover > div h5 {
+    color: var(--blue);
+}
+
+.button{
+    border-radius: 5px; 
+    outline: none;
+    border: 2px solid white;
+    background-color: var(--blue);
+    color: white;
+}
+
+.button:hover{
+    border: 2px solid white;
+    color: white;
+    background: none;
+}
+
+.sticky-header{
+    background-color: var(--color);
+}
+
+.navLinks::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    background-color: var(--blue);
+}
+
+.navLinks:hover::after{
+    transform: scaleX(1);
+}
+
+.navLinks:focus::after{
+    transform: scaleX(1);
+}
+
+.card1{
+    box-sizing: border-box;  
+    border-radius: 5px;
+    // background-color: rgba(0, 174, 255, 0.667);
+    padding: 2vw;
+}
+
+.container1{
+    height: 50vh;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.account-info-card{
+    box-shadow: 9px 9px 2px -1px lightsteelblue;
+    height: max-content;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    overflow: hidden;
+}
+
+.account-info-card .card-body{
+    background-color: white;
+}
+
+.thumbnail{
+    position: relative;
+    display: flex;
+    padding: 23px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail img{
+    box-shadow: 0px 0px 8px 1px gray;
+    z-index: 1;
+    width: 10vw;
+    min-width: 60%;
+}
+                
+.footer{
+    height: 40  vh;
+    background: rgba(0,0,0,0.5) url('../Images/SB\ \(2\).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+/* styling For Footer End */
+
+.bBotom{
+    border-left: 3px solid var(--blue);
+    display: inline;
+    position: relative;
+    left: 42vw;
+    padding-left: 5px;
+    overflow: hidden;
+}
+
+.bLeft{
+    border-left: 3px solid var(--color5);
+    display: inline;
+    position: relative;
+    left: 42vw;
+    padding-left: 5px;
+}
+
+.bgBlue{
+    background-color: #ff8400;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-btw{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.flex-space-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media(max-width: 991px) {
+    .flex-space-around{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.m-around{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-shadow{
+    box-shadow: 0px 0px 2px 1px grey; 
+    /* background-color: white; */
+}
+
+.mainBgc{
+    background-color: #ccd0d23b;
+}
+
+.text-underline{
+    text-decoration: underline blue;
+}
+
+.hover:hover{
+    text-decoration: underline;
+}
+
+.clrRed{
+ color: red;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.mAll-2{
+    margin: 10px;
+}

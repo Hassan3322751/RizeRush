@@ -1,0 +1,99 @@
+@media(max-width: 991px) {
+
+}
+
+@media(max-width: 500px) {
+  .hero{
+    max-height: 60vh;
+    margin-bottom: 0px;
+  }
+  .heroHeading{
+    margin: 0px;
+  }
+  .hero .div1{
+    width: 100%;
+    padding: 0px;
+  }
+  .heroHeading .text {
+    margin: 10px;
+    font-size: large;
+  }
+  .heroHeading span{
+    font-size: 15px;
+  }
+  .heroHeading .bgBlue{
+    padding: 3px;
+    border-radius: 3px;
+  }
+  .scroll-downs{
+    top: 55vh;
+  }
+  .mousey{
+    width: 1px;
+    padding: 6px 13px;
+  }
+}  
+
+/* Steps Component */
+@media(max-width: 500px) {
+  .stepsDiv .step .stepImg{
+    width: 60px;
+  }
+  .stepsDiv h1, .benfits-heding, .toolInfoHeading{
+    font-size: xx-large;
+  }
+  .stepsDiv .step, .benifits-text{
+    font-size: medium;
+    max-width: 100%;
+  }
+  .stepsDiv .card1{
+    margin: 0px;
+  }
+}   
+
+/* Benifits Component */
+@media(max-width: 500px) {
+  .benefits-card{
+    margin: 3px 0px;
+  }
+  .benefits-card img{
+    margin: 5px;
+    width: 35px;
+  }
+
+  /* Tools Component */
+  .tools{
+    padding: 0px 25px;
+  }
+  .toolsBox h1{
+    font-size: 2rem;
+  }
+}
+
+ /*User Dashboard  */
+@media(max-width: 500px) {
+  .account-info-card{
+    width: 100%;
+  }
+  .thumbnail{
+    padding: 10px 0px;
+  }
+  .thumbnail img{
+    min-width: 40%;
+    width: 100px;
+    margin-right: 10px;
+  }
+  .account-info-card .card-body h3{
+    font-size: 1.50rem;
+  }
+  .account-info-card .card-body {
+    font-size: .95rem;
+    margin-bottom: .5rem;
+  }
+  .account-info-card .card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+} 
+
