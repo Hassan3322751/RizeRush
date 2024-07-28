@@ -13,27 +13,21 @@ function Header() {
   const headerRef = useRef(null);
   const headerHeight = headerRef.current ? headerRef.current.clientHeight : 0;
 
-  useEffect( async () => {
-    try{
-        alert('try')
-        const response = await axios.get(`${baseUrl()}/isAuthenticated`, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            withCredentials: true,
-        })
-        console.log(response)
-        if (response.status === 200) {
-            setUser(true)
-            localStorage.setItem('user','true')
-        }else if(response.status === 400){
-            setUser(false)
-        }
-    } catch(error){
-        alert("Server error! Please try later.")
-        console.log(error)
-    }
-  }, []);
+//   useEffect( async () => {
+//     try{
+//         const response = await axios.get(`${baseUrl()}/isAuthenticated`, {
+//             withCredentials: true,
+//         })
+//         if (response.status === 200) {
+//             setUser(true)
+//         }else if(response.status === 400){
+//             setUser(false)
+//         }
+//     } catch(error){
+//         alert("Server error! Please try later.")
+//         console.log(error)
+//     }
+//   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
