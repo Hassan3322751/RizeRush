@@ -3,6 +3,7 @@ import { Container, Button, Table } from 'react-bootstrap';
 import '../CSS/CommonStyles.scss';
 import '../CSS/home.scss';
 import axios from 'axios';
+import baseUrl from '../Common Components/baseUrl.js';
 
 
 const Reffer_Earn = () => {
@@ -11,7 +12,7 @@ const Reffer_Earn = () => {
 
   useEffect(() => {
     const fetchReferrals = () => {
-        axios.get(`${import.meta.env.VITE_API_URL}/isAuthenticated`, {
+        axios.get(`${baseUrl()}/isAuthenticated`, {
             withCredentials: true,
         })
         .then((response) => {

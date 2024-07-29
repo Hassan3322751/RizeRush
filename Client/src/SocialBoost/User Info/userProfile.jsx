@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Container, Row, Col, Image, Button, Spinner } from 'react-bootstrap';
-import Cookies from 'js-cookie';
+import baseUrl from '../Common Components/baseUrl.js';
 import axios from 'axios';
 
 const UserProfile = () => {
@@ -10,18 +10,18 @@ const UserProfile = () => {
   const [ loading, setLoading ] = useState(false)
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_URL}/isAuthenticated`, {
+    axios.get(`${baseUrl()}/isAuthenticated`, {
       withCredentials: true,
     })
-      .then((response) => {
-        if (response.data.success) {
-          setUserName(response.data.message.name);
-          setUserEmail(response.data.message.email);
-        }
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    .then((response) => {
+      if (response.data.success) {
+        setUserName(response.data.message.name);
+        setUserEmail(response.data.message.email);
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }, []);
   
   return (
@@ -37,7 +37,7 @@ const UserProfile = () => {
         <Col md={8}>
           <h2>Hi! {userName}</h2>
           <p>Email: {userEmail}</p>
-          <Button variant="primary" onClick={handleLogout} disabled={loading}>
+          <Button variant="primary" disabled={loading}>
             Logout {loading ? <Spinner animation="border" size="sm" /> : ''}
           </Button>
         </Col>

@@ -1,5 +1,7 @@
+import baseUrl from '../Common Components/baseUrl.js';
+
 export const addPromotion = async (promotionData) => {
-    return fetch(`${import.meta.env.VITE_API_URL}/addPromotion`, {
+    return fetch(`${baseUrl()}/addPromotion`, {
       method: 'POST',
       credentials: 'include',
       headers: {

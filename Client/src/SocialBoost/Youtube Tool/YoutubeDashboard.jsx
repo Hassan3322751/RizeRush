@@ -29,8 +29,6 @@ const YoutubeDashboard = (prop) => {
         data = await getTikTokData(); // Assuming similar data structure for TikTok and Instagram
         setSocialMediaData(data);
       }
-      console.log(youtubeData)
-      console.log(socialMediaData)
 
       const uniquePromotionIds = [...new Set(data.promotions.map(promo => promo))];
       const combinedPromotions = [...uniquePromotionIds];

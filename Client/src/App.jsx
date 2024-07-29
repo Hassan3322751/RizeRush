@@ -13,12 +13,29 @@ import ViewPromotions from './SocialBoost/Youtube Tool/ViewPromotions.jsx';
 import Reffer_Earn from './SocialBoost/Common Components/Reffer_Earn.jsx'
 import TermsOfService from './SocialBoost/Main Page/Terms-of-Service.jsx';
 import PrivacyPoliicy from './SocialBoost/Main Page/Privacy_Policy.jsx';
+import baseUrl from './SocialBoost/Common Components/baseUrl.js';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 
 const App = () => {
-  let auth = localStorage.getItem('user')
-  const [user, setUser] = useState(auth === 'true' ? true : false);
+  const [user, setUser] = useState(false);
+  // const [user, setUser] = useState(auth === 'true' ? true : false);
+
+  useEffect(() => {
+    axios.get(`${baseUrl()}/isAuthenticated`, {
+      withCredentials: true,
+    })
+    .then((response) => {
+      if (response.data.success) {
+        setUser(true)
+      } else{
+        setUser(false)
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }, []);
 
 return (
   <React.Fragment>

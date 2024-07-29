@@ -1,8 +1,9 @@
+import baseUrl from '../Common Components/baseUrl.js';
 // apiUtils.js
 export const fetchPromotions = async (platformType) => {
     console.log(platformType);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/getPromotions?platformType=${platformType}`, {
+      const response = await fetch(`${baseUrl()}/getPromotions?platformType=${platformType}`, {
         method: 'GET',
         credentials: 'include',
       });

@@ -1,4 +1,4 @@
-
+import baseUrl from '../Common Components/baseUrl.js';
 export const fetchTiktokProfInfo = async (inputValue) => {
     console.log(inputValue);
     try {
@@ -17,7 +17,7 @@ export const fetchTiktokProfInfo = async (inputValue) => {
   export const saveTiktokProfInfo = async (profInfo) => {
       // console.log(profInfo);
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/saveTiktokProfInfo`, {
+        const response = await fetch(`${baseUrl()}/saveTiktokProfInfo`, {
           method: 'POST',
           credentials: 'include',
           headers: {

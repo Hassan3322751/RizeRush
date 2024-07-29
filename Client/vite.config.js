@@ -13,9 +13,9 @@ export default ({mode}) => {
     ],  
     server: {
       port: `5173`,
-      proxy: {
-          '/api/v1': 'http://localhost:4055',
-        }
+      // proxy: {
+      //     '/api/v1': 'http://localhost:4055',
+      //   }
       },
       resolve: {
         alias: {

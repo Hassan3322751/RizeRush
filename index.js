@@ -19,7 +19,7 @@ let state = process.env.STATE;
 app.use(
     cors(
       {
-        origin: [`${ process.env.VERCEL_FRONT }`, `${process.env.DEV_HTTPS_FRONT}`],
+        origin: [`${ process.env.VERCEL_FRONT }`, `${process.env.DEV_HTTPS_FRONT}`, 'http://localhost:5173', 'http://localhost:4173'],
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE'], 
         allowedHeaders: ['Content-Type', 'Authorization'],

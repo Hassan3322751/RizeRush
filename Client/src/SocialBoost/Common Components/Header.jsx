@@ -7,27 +7,31 @@ import axios from 'axios';
 import baseUrl from '../Common Components/baseUrl'
 // import Cookies from 'universal-cookie';
 function Header() {
-  const [user, setUser] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+
+  const [user, setUser] = useState(false);
+  // const [user, setUser] = useState(auth === 'true' ? true : false);
+
+  useEffect(() => {
+    console.log("header useffect")
+    axios.get(`${baseUrl()}/isAuthenticated`, {
+      withCredentials: true,
+    })
+    .then((response) => {
+      console.log(response)
+        if (response.data.success) {
+        setUser(true)
+      } else{
+        setUser(false)
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }, []);
 
   const headerRef = useRef(null);
   const headerHeight = headerRef.current ? headerRef.current.clientHeight : 0;
-
-//   useEffect( async () => {
-//     try{
-//         const response = await axios.get(`${baseUrl()}/isAuthenticated`, {
-//             withCredentials: true,
-//         })
-//         if (response.status === 200) {
-//             setUser(true)
-//         }else if(response.status === 400){
-//             setUser(false)
-//         }
-//     } catch(error){
-//         alert("Server error! Please try later.")
-//         console.log(error)
-//     }
-//   }, []);
 
   useEffect(() => {
     const handleScroll = () => {

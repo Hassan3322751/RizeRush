@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import '../CSS/CommonStyles.scss';
 import '../CSS/home.scss';
 import { Card, Button, Container } from 'react-bootstrap';
+import baseUrl from '../Common Components/baseUrl.js';
 
 const DailyBonusCard = ({props}) => {
   console.log(props)
@@ -18,7 +19,7 @@ const DailyBonusCard = ({props}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/dailyBonus?platformType=${platformType}`, {
+        const response = await fetch(`${baseUrl()}/dailyBonus?platformType=${platformType}`, {
           method: 'GET',
           credentials: 'include',
           headers: {
@@ -50,7 +51,7 @@ const DailyBonusCard = ({props}) => {
     setLoading(true)
     if(bonusData.dailyActionsDone >= 25){
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/dailyReward?platformType=${platformType}`, {
+        const response = await fetch(`${baseUrl()}/dailyReward?platformType=${platformType}`, {
           method: 'POST',
           credentials: 'include',
           headers: {

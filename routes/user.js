@@ -7,11 +7,10 @@ const router = express.Router();
 
 router.get("/api/v1/isAuthenticated", async (req,res) => {
     const { token } = req.cookies;
-
+    console.log("yes")
     if (token) {
         const userId = jwt.verify(token, `${process.env.JWT_TOKEN}`);
         const userData = await User.findById(userId)
-        console.log(userData)
         return res.status(200).json(
             {success: true, message: userData}
         )

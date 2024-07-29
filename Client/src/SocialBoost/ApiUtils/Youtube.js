@@ -1,4 +1,5 @@
 import axios from 'axios';
+import baseUrl from '../Common Components/baseUrl.js';
 
 export const fetchChannelInfo = async (inputValue) => {
   try {
@@ -28,7 +29,7 @@ export const fetchChannelInfo = async (inputValue) => {
 
 export const saveChannelInfo = async (channelInfo) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/saveYoutubeInfo`, {
+    const response = await fetch(`${baseUrl()}/saveYoutubeInfo`, {
       method: 'POST',
       credentials: 'include',
       headers: {

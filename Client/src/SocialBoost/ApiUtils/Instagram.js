@@ -1,4 +1,4 @@
-
+import baseUrl from '../Common Components/baseUrl.js';
 export const fetchInstaProfInfo = async (inputValue) => {
   console.log(inputValue);
     try {
@@ -17,7 +17,7 @@ export const fetchInstaProfInfo = async (inputValue) => {
 export const saveInstaProfInfo = async (profInfo) => {
     // console.log(profInfo);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/saveInstaProfInfo`, {
+      const response = await fetch(`${baseUrl()}/saveInstaProfInfo`, {
         method: 'POST',
         credentials: 'include',
         headers: {

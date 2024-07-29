@@ -5,9 +5,9 @@ import { fetchPromotions } from '../ApiUtils/Earn Credits';
 import DailyBonusCard from '../Common Components/DailyBonus';
 import RefferEarn from '../Common Components/RefferEarn';
 import Feedback from '../Common Components/Feedback_Card';
-import YouTubeSubscribeButton from '../Common Components/subscribeButton'
 import '../CSS/CommonStyles.scss';
 import '../CSS/home.scss';
+import baseUrl from '../Common Components/baseUrl.js';
 
 
 const EarnCredits = (prop) => {
@@ -44,7 +44,7 @@ const EarnCredits = (prop) => {
     const donePromotionId = promotions[currentPromotionIndex]._id;
     const promoType = promotions[currentPromotionIndex].promotionType;
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/jobResult?platformType=${platformType}`, {
+      const response = await fetch(`${baseUrl()}/jobResult?platformType=${platformType}`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -59,7 +59,6 @@ const EarnCredits = (prop) => {
             dailyActionsCompleted: prevData.dailyActionsCompleted + 1,
           }));
         }
-        console.log(dailyBonusData.dailyActionsCompleted)
         alert('suucess! credits will be added');
       }
       else {

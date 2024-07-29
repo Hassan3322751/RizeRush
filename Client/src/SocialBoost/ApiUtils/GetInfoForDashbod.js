@@ -1,3 +1,4 @@
+import baseUrl from '../Common Components/baseUrl.js';
 // apiUtils.js
 
 const fetchData = async (url) => {
@@ -24,17 +25,17 @@ const fetchData = async (url) => {
   };
   
   export const getYoutubeData = async () => {
-    const url = `${import.meta.env.VITE_API_URL}/getChannelInfo`;
+    const url = `${baseUrl()}/getChannelInfo`;
     return fetchData(url);
   };
   
   // Similar utility functions for TikTok and Instagram
   export const getTikTokData = async () => {
-    const url = `${import.meta.env.VITE_API_URL}/getTiktokProfInfo`;
+    const url = `${baseUrl()}/getTiktokProfInfo`;
     return fetchData(url);
   };
   
   export const getInstagramData = async () => {
-    const url = `${import.meta.env.VITE_API_URL}/getInstaProfInfo`;
+    const url = `${baseUrl()}/getInstaProfInfo`;
     return fetchData(url);
   };  
